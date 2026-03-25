@@ -1,0 +1,1829 @@
+{
+  "metadata": {
+    "source": "U.S. General Services Administration (GSA)",
+    "fiscalYear": "FY2026",
+    "effectiveDate": "2025-10-01",
+    "lastUpdated": "2026-03-25",
+    "downloadUrl": "https://www.gsa.gov/system/files/FY2026_PerDiemMasterRatesFile.xlsx",
+    "standardRate": {
+      "mie": 68,
+      "lodging": 110
+    },
+    "notes": "Update annually when new FY rates published (typically mid-August, effective Oct 1). Cities not listed use the standard CONUS rate."
+  },
+  "mieBreakdown": [
+    {
+      "total": 68,
+      "breakfast": 16,
+      "lunch": 19,
+      "dinner": 28,
+      "incidentals": 5
+    },
+    {
+      "total": 74,
+      "breakfast": 18,
+      "lunch": 20,
+      "dinner": 31,
+      "incidentals": 5
+    },
+    {
+      "total": 80,
+      "breakfast": 20,
+      "lunch": 22,
+      "dinner": 33,
+      "incidentals": 5
+    },
+    {
+      "total": 86,
+      "breakfast": 22,
+      "lunch": 23,
+      "dinner": 36,
+      "incidentals": 5
+    },
+    {
+      "total": 92,
+      "breakfast": 23,
+      "lunch": 26,
+      "dinner": 38,
+      "incidentals": 5
+    }
+  ],
+  "rates": [
+    {
+      "state": "AL",
+      "city": "Birmingham",
+      "mie": 80,
+      "lodging": 126
+    },
+    {
+      "state": "AL",
+      "city": "Gulf Shores",
+      "mie": 74,
+      "lodging": 216
+    },
+    {
+      "state": "AL",
+      "city": "Huntsville",
+      "mie": 74,
+      "lodging": 141
+    },
+    {
+      "state": "AL",
+      "city": "Mobile",
+      "mie": 74,
+      "lodging": 114
+    },
+    {
+      "state": "AR",
+      "city": "Hot Springs",
+      "mie": 68,
+      "lodging": 114
+    },
+    {
+      "state": "AZ",
+      "city": "Grand Canyon / Flagstaff",
+      "mie": 80,
+      "lodging": 144
+    },
+    {
+      "state": "AZ",
+      "city": "Kayenta",
+      "mie": 74,
+      "lodging": 145
+    },
+    {
+      "state": "AZ",
+      "city": "Phoenix / Scottsdale",
+      "mie": 86,
+      "lodging": 229
+    },
+    {
+      "state": "AZ",
+      "city": "Sedona",
+      "mie": 92,
+      "lodging": 274
+    },
+    {
+      "state": "AZ",
+      "city": "Tucson",
+      "mie": 80,
+      "lodging": 171
+    },
+    {
+      "state": "CA",
+      "city": "Antioch / Brentwood / Concord",
+      "mie": 86,
+      "lodging": 147
+    },
+    {
+      "state": "CA",
+      "city": "Bakersfield / Ridgecrest",
+      "mie": 74,
+      "lodging": 132
+    },
+    {
+      "state": "CA",
+      "city": "Barstow / Ontario / Victorville",
+      "mie": 86,
+      "lodging": 124
+    },
+    {
+      "state": "CA",
+      "city": "Death Valley",
+      "mie": 80,
+      "lodging": 142
+    },
+    {
+      "state": "CA",
+      "city": "Eureka / Arcata / McKinleyville",
+      "mie": 86,
+      "lodging": 172
+    },
+    {
+      "state": "CA",
+      "city": "Fresno",
+      "mie": 86,
+      "lodging": 129
+    },
+    {
+      "state": "CA",
+      "city": "Los Angeles",
+      "mie": 86,
+      "lodging": 191
+    },
+    {
+      "state": "CA",
+      "city": "Mammoth Lakes",
+      "mie": 86,
+      "lodging": 195
+    },
+    {
+      "state": "CA",
+      "city": "Mill Valley / San Rafael / Novato",
+      "mie": 92,
+      "lodging": 175
+    },
+    {
+      "state": "CA",
+      "city": "Monterey",
+      "mie": 92,
+      "lodging": 279
+    },
+    {
+      "state": "CA",
+      "city": "Napa",
+      "mie": 92,
+      "lodging": 246
+    },
+    {
+      "state": "CA",
+      "city": "Oakhurst",
+      "mie": 80,
+      "lodging": 135
+    },
+    {
+      "state": "CA",
+      "city": "Oakland",
+      "mie": 92,
+      "lodging": 145
+    },
+    {
+      "state": "CA",
+      "city": "Palm Springs",
+      "mie": 86,
+      "lodging": 186
+    },
+    {
+      "state": "CA",
+      "city": "Point Arena / Gualala",
+      "mie": 86,
+      "lodging": 129
+    },
+    {
+      "state": "CA",
+      "city": "Sacramento",
+      "mie": 86,
+      "lodging": 150
+    },
+    {
+      "state": "CA",
+      "city": "San Diego",
+      "mie": 86,
+      "lodging": 237
+    },
+    {
+      "state": "CA",
+      "city": "San Francisco",
+      "mie": 92,
+      "lodging": 272
+    },
+    {
+      "state": "CA",
+      "city": "San Luis Obispo",
+      "mie": 86,
+      "lodging": 203
+    },
+    {
+      "state": "CA",
+      "city": "San Mateo / Foster City / Belmont",
+      "mie": 86,
+      "lodging": 183
+    },
+    {
+      "state": "CA",
+      "city": "Santa Barbara",
+      "mie": 92,
+      "lodging": 262
+    },
+    {
+      "state": "CA",
+      "city": "Santa Cruz",
+      "mie": 86,
+      "lodging": 176
+    },
+    {
+      "state": "CA",
+      "city": "Santa Monica",
+      "mie": 92,
+      "lodging": 273
+    },
+    {
+      "state": "CA",
+      "city": "Santa Rosa",
+      "mie": 86,
+      "lodging": 157
+    },
+    {
+      "state": "CA",
+      "city": "South Lake Tahoe",
+      "mie": 86,
+      "lodging": 247
+    },
+    {
+      "state": "CA",
+      "city": "Stockton",
+      "mie": 74,
+      "lodging": 132
+    },
+    {
+      "state": "CA",
+      "city": "Sunnyvale / Palo Alto / San Jose",
+      "mie": 92,
+      "lodging": 192
+    },
+    {
+      "state": "CA",
+      "city": "Tahoe City",
+      "mie": 86,
+      "lodging": 131
+    },
+    {
+      "state": "CA",
+      "city": "Truckee",
+      "mie": 86,
+      "lodging": 173
+    },
+    {
+      "state": "CA",
+      "city": "Visalia",
+      "mie": 80,
+      "lodging": 131
+    },
+    {
+      "state": "CA",
+      "city": "West Sacramento / Davis",
+      "mie": 80,
+      "lodging": 142
+    },
+    {
+      "state": "CA",
+      "city": "Yosemite National Park",
+      "mie": 86,
+      "lodging": 203
+    },
+    {
+      "state": "CO",
+      "city": "Aspen",
+      "mie": 92,
+      "lodging": 407
+    },
+    {
+      "state": "CO",
+      "city": "Boulder / Broomfield",
+      "mie": 80,
+      "lodging": 173
+    },
+    {
+      "state": "CO",
+      "city": "Colorado Springs",
+      "mie": 86,
+      "lodging": 168
+    },
+    {
+      "state": "CO",
+      "city": "Cortez",
+      "mie": 74,
+      "lodging": 133
+    },
+    {
+      "state": "CO",
+      "city": "Crested Butte / Gunnison",
+      "mie": 86,
+      "lodging": 154
+    },
+    {
+      "state": "CO",
+      "city": "Denver / Aurora",
+      "mie": 92,
+      "lodging": 215
+    },
+    {
+      "state": "CO",
+      "city": "Douglas",
+      "mie": 80,
+      "lodging": 142
+    },
+    {
+      "state": "CO",
+      "city": "Durango",
+      "mie": 80,
+      "lodging": 184
+    },
+    {
+      "state": "CO",
+      "city": "Fort Collins / Loveland",
+      "mie": 80,
+      "lodging": 140
+    },
+    {
+      "state": "CO",
+      "city": "Grand Lake",
+      "mie": 86,
+      "lodging": 173
+    },
+    {
+      "state": "CO",
+      "city": "Montrose",
+      "mie": 74,
+      "lodging": 185
+    },
+    {
+      "state": "CO",
+      "city": "Silverthorne / Breckenridge",
+      "mie": 92,
+      "lodging": 282
+    },
+    {
+      "state": "CO",
+      "city": "Steamboat Springs",
+      "mie": 92,
+      "lodging": 288
+    },
+    {
+      "state": "CO",
+      "city": "Telluride",
+      "mie": 92,
+      "lodging": 350
+    },
+    {
+      "state": "CO",
+      "city": "Vail",
+      "mie": 92,
+      "lodging": 397
+    },
+    {
+      "state": "CT",
+      "city": "Bridgeport / Danbury",
+      "mie": 86,
+      "lodging": 146
+    },
+    {
+      "state": "CT",
+      "city": "Hartford",
+      "mie": 80,
+      "lodging": 138
+    },
+    {
+      "state": "CT",
+      "city": "New Haven",
+      "mie": 80,
+      "lodging": 130
+    },
+    {
+      "state": "CT",
+      "city": "New London / Groton",
+      "mie": 86,
+      "lodging": 124
+    },
+    {
+      "state": "DC",
+      "city": "District of Columbia",
+      "mie": 92,
+      "lodging": 276
+    },
+    {
+      "state": "DE",
+      "city": "Lewes",
+      "mie": 74,
+      "lodging": 221
+    },
+    {
+      "state": "DE",
+      "city": "Wilmington",
+      "mie": 74,
+      "lodging": 127
+    },
+    {
+      "state": "FL",
+      "city": "Boca Raton / Delray Beach / Jupiter",
+      "mie": 86,
+      "lodging": 244
+    },
+    {
+      "state": "FL",
+      "city": "Bradenton",
+      "mie": 80,
+      "lodging": 225
+    },
+    {
+      "state": "FL",
+      "city": "Cocoa Beach",
+      "mie": 74,
+      "lodging": 208
+    },
+    {
+      "state": "FL",
+      "city": "Daytona Beach",
+      "mie": 80,
+      "lodging": 157
+    },
+    {
+      "state": "FL",
+      "city": "Fort Lauderdale",
+      "mie": 86,
+      "lodging": 224
+    },
+    {
+      "state": "FL",
+      "city": "Fort Myers",
+      "mie": 80,
+      "lodging": 216
+    },
+    {
+      "state": "FL",
+      "city": "Fort Walton Beach / De Funiak Springs",
+      "mie": 86,
+      "lodging": 260
+    },
+    {
+      "state": "FL",
+      "city": "Gulf Breeze",
+      "mie": 74,
+      "lodging": 214
+    },
+    {
+      "state": "FL",
+      "city": "Key West",
+      "mie": 86,
+      "lodging": 436
+    },
+    {
+      "state": "FL",
+      "city": "Miami",
+      "mie": 92,
+      "lodging": 232
+    },
+    {
+      "state": "FL",
+      "city": "Naples",
+      "mie": 80,
+      "lodging": 314
+    },
+    {
+      "state": "FL",
+      "city": "Orlando",
+      "mie": 80,
+      "lodging": 169
+    },
+    {
+      "state": "FL",
+      "city": "Panama City",
+      "mie": 80,
+      "lodging": 194
+    },
+    {
+      "state": "FL",
+      "city": "Pensacola",
+      "mie": 74,
+      "lodging": 190
+    },
+    {
+      "state": "FL",
+      "city": "Punta Gorda",
+      "mie": 74,
+      "lodging": 192
+    },
+    {
+      "state": "FL",
+      "city": "Sarasota",
+      "mie": 86,
+      "lodging": 205
+    },
+    {
+      "state": "FL",
+      "city": "Sebring",
+      "mie": 74,
+      "lodging": 219
+    },
+    {
+      "state": "FL",
+      "city": "St. Augustine",
+      "mie": 80,
+      "lodging": 170
+    },
+    {
+      "state": "FL",
+      "city": "Stuart",
+      "mie": 80,
+      "lodging": 214
+    },
+    {
+      "state": "FL",
+      "city": "Tallahassee",
+      "mie": 80,
+      "lodging": 138
+    },
+    {
+      "state": "FL",
+      "city": "Tampa / St. Petersburg",
+      "mie": 80,
+      "lodging": 200
+    },
+    {
+      "state": "FL",
+      "city": "Vero Beach",
+      "mie": 74,
+      "lodging": 259
+    },
+    {
+      "state": "GA",
+      "city": "Athens",
+      "mie": 74,
+      "lodging": 136
+    },
+    {
+      "state": "GA",
+      "city": "Atlanta",
+      "mie": 86,
+      "lodging": 197
+    },
+    {
+      "state": "GA",
+      "city": "Augusta",
+      "mie": 74,
+      "lodging": 125
+    },
+    {
+      "state": "GA",
+      "city": "Jekyll Island / Brunswick",
+      "mie": 86,
+      "lodging": 223
+    },
+    {
+      "state": "GA",
+      "city": "Marietta",
+      "mie": 74,
+      "lodging": 126
+    },
+    {
+      "state": "GA",
+      "city": "Savannah",
+      "mie": 80,
+      "lodging": 176
+    },
+    {
+      "state": "IA",
+      "city": "Dallas",
+      "mie": 80,
+      "lodging": 115
+    },
+    {
+      "state": "IA",
+      "city": "Des Moines",
+      "mie": 80,
+      "lodging": 121
+    },
+    {
+      "state": "ID",
+      "city": "Boise",
+      "mie": 86,
+      "lodging": 191
+    },
+    {
+      "state": "ID",
+      "city": "Coeur d'Alene",
+      "mie": 74,
+      "lodging": 217
+    },
+    {
+      "state": "ID",
+      "city": "Sun Valley / Ketchum",
+      "mie": 80,
+      "lodging": 300
+    },
+    {
+      "state": "IL",
+      "city": "Bolingbrook / Romeoville / Lemont",
+      "mie": 74,
+      "lodging": 114
+    },
+    {
+      "state": "IL",
+      "city": "Chicago",
+      "mie": 92,
+      "lodging": 234
+    },
+    {
+      "state": "IL",
+      "city": "East St. Louis / O'Fallon / Fairview Heights",
+      "mie": 86,
+      "lodging": 150
+    },
+    {
+      "state": "IL",
+      "city": "Oak Brook Terrace",
+      "mie": 80,
+      "lodging": 115
+    },
+    {
+      "state": "IN",
+      "city": "Bloomington",
+      "mie": 74,
+      "lodging": 139
+    },
+    {
+      "state": "IN",
+      "city": "Indianapolis / Carmel",
+      "mie": 80,
+      "lodging": 133
+    },
+    {
+      "state": "IN",
+      "city": "Lafayette / West Lafayette",
+      "mie": 74,
+      "lodging": 143
+    },
+    {
+      "state": "KS",
+      "city": "Kansas City / Overland Park",
+      "mie": 80,
+      "lodging": 135
+    },
+    {
+      "state": "KY",
+      "city": "Boone",
+      "mie": 68,
+      "lodging": 116
+    },
+    {
+      "state": "KY",
+      "city": "Kenton",
+      "mie": 86,
+      "lodging": 163
+    },
+    {
+      "state": "KY",
+      "city": "Lexington",
+      "mie": 80,
+      "lodging": 118
+    },
+    {
+      "state": "KY",
+      "city": "Louisville",
+      "mie": 80,
+      "lodging": 164
+    },
+    {
+      "state": "LA",
+      "city": "Alexandria / Leesville / Natchitoches",
+      "mie": 68,
+      "lodging": 112
+    },
+    {
+      "state": "LA",
+      "city": "New Orleans",
+      "mie": 80,
+      "lodging": 179
+    },
+    {
+      "state": "MA",
+      "city": "Andover",
+      "mie": 80,
+      "lodging": 137
+    },
+    {
+      "state": "MA",
+      "city": "Boston / Cambridge",
+      "mie": 92,
+      "lodging": 349
+    },
+    {
+      "state": "MA",
+      "city": "Burlington / Woburn",
+      "mie": 86,
+      "lodging": 178
+    },
+    {
+      "state": "MA",
+      "city": "Falmouth",
+      "mie": 86,
+      "lodging": 253
+    },
+    {
+      "state": "MA",
+      "city": "Hyannis",
+      "mie": 92,
+      "lodging": 209
+    },
+    {
+      "state": "MA",
+      "city": "Martha's Vineyard",
+      "mie": 92,
+      "lodging": 462
+    },
+    {
+      "state": "MA",
+      "city": "Nantucket",
+      "mie": 92,
+      "lodging": 471
+    },
+    {
+      "state": "MA",
+      "city": "Northampton",
+      "mie": 80,
+      "lodging": 157
+    },
+    {
+      "state": "MA",
+      "city": "Pittsfield",
+      "mie": 86,
+      "lodging": 178
+    },
+    {
+      "state": "MA",
+      "city": "Plymouth / Taunton / New Bedford",
+      "mie": 80,
+      "lodging": 126
+    },
+    {
+      "state": "MA",
+      "city": "Quincy",
+      "mie": 80,
+      "lodging": 175
+    },
+    {
+      "state": "MA",
+      "city": "Springfield",
+      "mie": 74,
+      "lodging": 128
+    },
+    {
+      "state": "MA",
+      "city": "Worcester",
+      "mie": 80,
+      "lodging": 135
+    },
+    {
+      "state": "MD",
+      "city": "Aberdeen / Bel Air / Belcamp",
+      "mie": 74,
+      "lodging": 113
+    },
+    {
+      "state": "MD",
+      "city": "Annapolis",
+      "mie": 80,
+      "lodging": 161
+    },
+    {
+      "state": "MD",
+      "city": "Baltimore City",
+      "mie": 86,
+      "lodging": 150
+    },
+    {
+      "state": "MD",
+      "city": "Cambridge / St. Michaels",
+      "mie": 80,
+      "lodging": 186
+    },
+    {
+      "state": "MD",
+      "city": "Centreville",
+      "mie": 74,
+      "lodging": 154
+    },
+    {
+      "state": "MD",
+      "city": "Columbia",
+      "mie": 86,
+      "lodging": 113
+    },
+    {
+      "state": "MD",
+      "city": "Ocean City",
+      "mie": 80,
+      "lodging": 295
+    },
+    {
+      "state": "ME",
+      "city": "Bar Harbor / Rockport",
+      "mie": 92,
+      "lodging": 304
+    },
+    {
+      "state": "ME",
+      "city": "Kennebunk / Kittery / Sanford",
+      "mie": 86,
+      "lodging": 201
+    },
+    {
+      "state": "ME",
+      "city": "Portland",
+      "mie": 80,
+      "lodging": 211
+    },
+    {
+      "state": "MI",
+      "city": "Ann Arbor",
+      "mie": 80,
+      "lodging": 146
+    },
+    {
+      "state": "MI",
+      "city": "Detroit",
+      "mie": 74,
+      "lodging": 152
+    },
+    {
+      "state": "MI",
+      "city": "Grand Rapids",
+      "mie": 80,
+      "lodging": 119
+    },
+    {
+      "state": "MI",
+      "city": "Holland",
+      "mie": 74,
+      "lodging": 157
+    },
+    {
+      "state": "MI",
+      "city": "Mackinac Island",
+      "mie": 86,
+      "lodging": 195
+    },
+    {
+      "state": "MI",
+      "city": "Midland",
+      "mie": 74,
+      "lodging": 120
+    },
+    {
+      "state": "MI",
+      "city": "Muskegon",
+      "mie": 68,
+      "lodging": 149
+    },
+    {
+      "state": "MI",
+      "city": "Petoskey",
+      "mie": 86,
+      "lodging": 220
+    },
+    {
+      "state": "MI",
+      "city": "Pontiac / Auburn Hills",
+      "mie": 80,
+      "lodging": 116
+    },
+    {
+      "state": "MI",
+      "city": "South Haven",
+      "mie": 68,
+      "lodging": 142
+    },
+    {
+      "state": "MI",
+      "city": "Traverse City",
+      "mie": 80,
+      "lodging": 235
+    },
+    {
+      "state": "MN",
+      "city": "Duluth",
+      "mie": 86,
+      "lodging": 220
+    },
+    {
+      "state": "MN",
+      "city": "Minneapolis / St. Paul",
+      "mie": 92,
+      "lodging": 148
+    },
+    {
+      "state": "MN",
+      "city": "Rochester",
+      "mie": 80,
+      "lodging": 127
+    },
+    {
+      "state": "MO",
+      "city": "Kansas City",
+      "mie": 80,
+      "lodging": 135
+    },
+    {
+      "state": "MO",
+      "city": "St. Louis",
+      "mie": 86,
+      "lodging": 150
+    },
+    {
+      "state": "MS",
+      "city": "Oxford",
+      "mie": 68,
+      "lodging": 127
+    },
+    {
+      "state": "MS",
+      "city": "Southaven",
+      "mie": 68,
+      "lodging": 126
+    },
+    {
+      "state": "MS",
+      "city": "Starkville",
+      "mie": 68,
+      "lodging": 125
+    },
+    {
+      "state": "MT",
+      "city": "Big Sky / West Yellowstone/Gardiner",
+      "mie": 80,
+      "lodging": 310
+    },
+    {
+      "state": "MT",
+      "city": "Helena",
+      "mie": 74,
+      "lodging": 132
+    },
+    {
+      "state": "MT",
+      "city": "Kalispell/Whitefish",
+      "mie": 80,
+      "lodging": 232
+    },
+    {
+      "state": "MT",
+      "city": "Missoula",
+      "mie": 74,
+      "lodging": 195
+    },
+    {
+      "state": "NC",
+      "city": "Asheville",
+      "mie": 80,
+      "lodging": 141
+    },
+    {
+      "state": "NC",
+      "city": "Atlantic Beach / Morehead City",
+      "mie": 74,
+      "lodging": 178
+    },
+    {
+      "state": "NC",
+      "city": "Chapel Hill",
+      "mie": 80,
+      "lodging": 140
+    },
+    {
+      "state": "NC",
+      "city": "Charlotte",
+      "mie": 80,
+      "lodging": 131
+    },
+    {
+      "state": "NC",
+      "city": "Durham",
+      "mie": 74,
+      "lodging": 121
+    },
+    {
+      "state": "NC",
+      "city": "Fayetteville",
+      "mie": 68,
+      "lodging": 124
+    },
+    {
+      "state": "NC",
+      "city": "Greensboro",
+      "mie": 74,
+      "lodging": 123
+    },
+    {
+      "state": "NC",
+      "city": "Kill Devil Hills",
+      "mie": 74,
+      "lodging": 254
+    },
+    {
+      "state": "NC",
+      "city": "Raleigh",
+      "mie": 74,
+      "lodging": 131
+    },
+    {
+      "state": "NC",
+      "city": "Wilmington",
+      "mie": 74,
+      "lodging": 147
+    },
+    {
+      "state": "NE",
+      "city": "Omaha",
+      "mie": 80,
+      "lodging": 122
+    },
+    {
+      "state": "NH",
+      "city": "Concord",
+      "mie": 74,
+      "lodging": 124
+    },
+    {
+      "state": "NH",
+      "city": "Conway",
+      "mie": 80,
+      "lodging": 161
+    },
+    {
+      "state": "NH",
+      "city": "Durham",
+      "mie": 74,
+      "lodging": 152
+    },
+    {
+      "state": "NH",
+      "city": "Laconia",
+      "mie": 74,
+      "lodging": 182
+    },
+    {
+      "state": "NH",
+      "city": "Lebanon / Lincoln / West Lebanon",
+      "mie": 74,
+      "lodging": 177
+    },
+    {
+      "state": "NH",
+      "city": "Manchester",
+      "mie": 74,
+      "lodging": 130
+    },
+    {
+      "state": "NH",
+      "city": "Portsmouth",
+      "mie": 74,
+      "lodging": 192
+    },
+    {
+      "state": "NJ",
+      "city": "Cherry Hill / Moorestown",
+      "mie": 80,
+      "lodging": 112
+    },
+    {
+      "state": "NJ",
+      "city": "Eatontown / Freehold",
+      "mie": 86,
+      "lodging": 146
+    },
+    {
+      "state": "NJ",
+      "city": "Edison / Piscataway",
+      "mie": 80,
+      "lodging": 122
+    },
+    {
+      "state": "NJ",
+      "city": "Flemington",
+      "mie": 80,
+      "lodging": 124
+    },
+    {
+      "state": "NJ",
+      "city": "Newark",
+      "mie": 86,
+      "lodging": 156
+    },
+    {
+      "state": "NJ",
+      "city": "Parsippany",
+      "mie": 80,
+      "lodging": 143
+    },
+    {
+      "state": "NJ",
+      "city": "Princeton / Trenton",
+      "mie": 86,
+      "lodging": 138
+    },
+    {
+      "state": "NJ",
+      "city": "Somerset",
+      "mie": 80,
+      "lodging": 138
+    },
+    {
+      "state": "NJ",
+      "city": "Springfield / Cranford / New Providence",
+      "mie": 80,
+      "lodging": 139
+    },
+    {
+      "state": "NJ",
+      "city": "Toms River",
+      "mie": 74,
+      "lodging": 213
+    },
+    {
+      "state": "NM",
+      "city": "Albuquerque",
+      "mie": 80,
+      "lodging": 144
+    },
+    {
+      "state": "NM",
+      "city": "Carlsbad",
+      "mie": 74,
+      "lodging": 155
+    },
+    {
+      "state": "NM",
+      "city": "Santa Fe",
+      "mie": 80,
+      "lodging": 167
+    },
+    {
+      "state": "NM",
+      "city": "Taos",
+      "mie": 74,
+      "lodging": 128
+    },
+    {
+      "state": "NV",
+      "city": "Incline Village / Reno / Sparks",
+      "mie": 80,
+      "lodging": 184
+    },
+    {
+      "state": "NV",
+      "city": "Las Vegas",
+      "mie": 86,
+      "lodging": 159
+    },
+    {
+      "state": "NY",
+      "city": "Albany",
+      "mie": 86,
+      "lodging": 117
+    },
+    {
+      "state": "NY",
+      "city": "Binghamton",
+      "mie": 74,
+      "lodging": 117
+    },
+    {
+      "state": "NY",
+      "city": "Buffalo",
+      "mie": 80,
+      "lodging": 139
+    },
+    {
+      "state": "NY",
+      "city": "Floral Park / Garden City / Great Neck",
+      "mie": 86,
+      "lodging": 164
+    },
+    {
+      "state": "NY",
+      "city": "Glens Falls",
+      "mie": 86,
+      "lodging": 186
+    },
+    {
+      "state": "NY",
+      "city": "Ithaca",
+      "mie": 80,
+      "lodging": 144
+    },
+    {
+      "state": "NY",
+      "city": "Kingston",
+      "mie": 86,
+      "lodging": 139
+    },
+    {
+      "state": "NY",
+      "city": "Lake Placid",
+      "mie": 86,
+      "lodging": 238
+    },
+    {
+      "state": "NY",
+      "city": "New York City",
+      "mie": 92,
+      "lodging": 342
+    },
+    {
+      "state": "NY",
+      "city": "Niagara Falls",
+      "mie": 80,
+      "lodging": 142
+    },
+    {
+      "state": "NY",
+      "city": "Nyack / Palisades",
+      "mie": 80,
+      "lodging": 129
+    },
+    {
+      "state": "NY",
+      "city": "Poughkeepsie",
+      "mie": 80,
+      "lodging": 115
+    },
+    {
+      "state": "NY",
+      "city": "Riverhead / Ronkonkoma / Melville",
+      "mie": 86,
+      "lodging": 155
+    },
+    {
+      "state": "NY",
+      "city": "Rochester",
+      "mie": 80,
+      "lodging": 132
+    },
+    {
+      "state": "NY",
+      "city": "Saratoga Springs / Schenectady",
+      "mie": 80,
+      "lodging": 214
+    },
+    {
+      "state": "NY",
+      "city": "Syracuse / Oswego",
+      "mie": 80,
+      "lodging": 122
+    },
+    {
+      "state": "NY",
+      "city": "Tarrytown / White Plains / New Rochelle",
+      "mie": 92,
+      "lodging": 161
+    },
+    {
+      "state": "NY",
+      "city": "Troy",
+      "mie": 80,
+      "lodging": 121
+    },
+    {
+      "state": "NY",
+      "city": "West Point",
+      "mie": 80,
+      "lodging": 123
+    },
+    {
+      "state": "OH",
+      "city": "Cincinnati",
+      "mie": 86,
+      "lodging": 163
+    },
+    {
+      "state": "OH",
+      "city": "Cleveland",
+      "mie": 80,
+      "lodging": 159
+    },
+    {
+      "state": "OH",
+      "city": "Columbus",
+      "mie": 80,
+      "lodging": 131
+    },
+    {
+      "state": "OH",
+      "city": "Dayton / Fairborn",
+      "mie": 74,
+      "lodging": 115
+    },
+    {
+      "state": "OH",
+      "city": "Hamilton",
+      "mie": 74,
+      "lodging": 124
+    },
+    {
+      "state": "OH",
+      "city": "Sandusky",
+      "mie": 68,
+      "lodging": 144
+    },
+    {
+      "state": "OK",
+      "city": "Oklahoma City",
+      "mie": 80,
+      "lodging": 116
+    },
+    {
+      "state": "OR",
+      "city": "Beaverton",
+      "mie": 80,
+      "lodging": 132
+    },
+    {
+      "state": "OR",
+      "city": "Bend",
+      "mie": 86,
+      "lodging": 192
+    },
+    {
+      "state": "OR",
+      "city": "Clackamas",
+      "mie": 80,
+      "lodging": 136
+    },
+    {
+      "state": "OR",
+      "city": "Eugene / Florence",
+      "mie": 80,
+      "lodging": 192
+    },
+    {
+      "state": "OR",
+      "city": "Lincoln City",
+      "mie": 92,
+      "lodging": 167
+    },
+    {
+      "state": "OR",
+      "city": "Portland",
+      "mie": 86,
+      "lodging": 155
+    },
+    {
+      "state": "OR",
+      "city": "Seaside",
+      "mie": 86,
+      "lodging": 236
+    },
+    {
+      "state": "PA",
+      "city": "Allentown / Easton / Bethlehem",
+      "mie": 74,
+      "lodging": 115
+    },
+    {
+      "state": "PA",
+      "city": "Bucks",
+      "mie": 80,
+      "lodging": 119
+    },
+    {
+      "state": "PA",
+      "city": "Chester / Radnor / Essington",
+      "mie": 80,
+      "lodging": 127
+    },
+    {
+      "state": "PA",
+      "city": "Gettysburg",
+      "mie": 68,
+      "lodging": 122
+    },
+    {
+      "state": "PA",
+      "city": "Harrisburg",
+      "mie": 74,
+      "lodging": 124
+    },
+    {
+      "state": "PA",
+      "city": "Hershey",
+      "mie": 80,
+      "lodging": 196
+    },
+    {
+      "state": "PA",
+      "city": "Lancaster",
+      "mie": 74,
+      "lodging": 123
+    },
+    {
+      "state": "PA",
+      "city": "Malvern / Frazer / Berwyn",
+      "mie": 80,
+      "lodging": 118
+    },
+    {
+      "state": "PA",
+      "city": "Montgomery",
+      "mie": 80,
+      "lodging": 126
+    },
+    {
+      "state": "PA",
+      "city": "Philadelphia",
+      "mie": 92,
+      "lodging": 218
+    },
+    {
+      "state": "PA",
+      "city": "Pittsburgh",
+      "mie": 80,
+      "lodging": 138
+    },
+    {
+      "state": "PA",
+      "city": "Reading",
+      "mie": 74,
+      "lodging": 117
+    },
+    {
+      "state": "PA",
+      "city": "State College",
+      "mie": 74,
+      "lodging": 124
+    },
+    {
+      "state": "RI",
+      "city": "Jamestown / Middletown / Newport",
+      "mie": 80,
+      "lodging": 268
+    },
+    {
+      "state": "RI",
+      "city": "Providence / Bristol",
+      "mie": 80,
+      "lodging": 154
+    },
+    {
+      "state": "SC",
+      "city": "Charleston",
+      "mie": 92,
+      "lodging": 288
+    },
+    {
+      "state": "SC",
+      "city": "Columbia",
+      "mie": 74,
+      "lodging": 115
+    },
+    {
+      "state": "SC",
+      "city": "Hilton Head",
+      "mie": 80,
+      "lodging": 215
+    },
+    {
+      "state": "SC",
+      "city": "Myrtle Beach",
+      "mie": 74,
+      "lodging": 182
+    },
+    {
+      "state": "SD",
+      "city": "Deadwood / Spearfish",
+      "mie": 80,
+      "lodging": 140
+    },
+    {
+      "state": "SD",
+      "city": "Hot Springs",
+      "mie": 74,
+      "lodging": 161
+    },
+    {
+      "state": "SD",
+      "city": "Rapid City",
+      "mie": 74,
+      "lodging": 158
+    },
+    {
+      "state": "TN",
+      "city": "Brentwood / Franklin",
+      "mie": 86,
+      "lodging": 130
+    },
+    {
+      "state": "TN",
+      "city": "Chattanooga",
+      "mie": 74,
+      "lodging": 117
+    },
+    {
+      "state": "TN",
+      "city": "Knoxville",
+      "mie": 74,
+      "lodging": 119
+    },
+    {
+      "state": "TN",
+      "city": "Memphis",
+      "mie": 74,
+      "lodging": 129
+    },
+    {
+      "state": "TN",
+      "city": "Nashville",
+      "mie": 86,
+      "lodging": 248
+    },
+    {
+      "state": "TX",
+      "city": "Arlington / Fort Worth / Grapevine",
+      "mie": 80,
+      "lodging": 181
+    },
+    {
+      "state": "TX",
+      "city": "Austin",
+      "mie": 80,
+      "lodging": 187
+    },
+    {
+      "state": "TX",
+      "city": "Big Spring",
+      "mie": 68,
+      "lodging": 114
+    },
+    {
+      "state": "TX",
+      "city": "Dallas",
+      "mie": 80,
+      "lodging": 191
+    },
+    {
+      "state": "TX",
+      "city": "Galveston",
+      "mie": 74,
+      "lodging": 146
+    },
+    {
+      "state": "TX",
+      "city": "Houston",
+      "mie": 80,
+      "lodging": 128
+    },
+    {
+      "state": "TX",
+      "city": "Midland / Odessa",
+      "mie": 74,
+      "lodging": 132
+    },
+    {
+      "state": "TX",
+      "city": "Pecos",
+      "mie": 74,
+      "lodging": 121
+    },
+    {
+      "state": "TX",
+      "city": "Plano",
+      "mie": 80,
+      "lodging": 123
+    },
+    {
+      "state": "TX",
+      "city": "San Antonio",
+      "mie": 74,
+      "lodging": 161
+    },
+    {
+      "state": "TX",
+      "city": "South Padre Island",
+      "mie": 74,
+      "lodging": 140
+    },
+    {
+      "state": "UT",
+      "city": "Moab",
+      "mie": 86,
+      "lodging": 221
+    },
+    {
+      "state": "UT",
+      "city": "Park City",
+      "mie": 92,
+      "lodging": 483
+    },
+    {
+      "state": "UT",
+      "city": "Provo",
+      "mie": 74,
+      "lodging": 117
+    },
+    {
+      "state": "UT",
+      "city": "Salt Lake City",
+      "mie": 80,
+      "lodging": 142
+    },
+    {
+      "state": "VA",
+      "city": "Blacksburg",
+      "mie": 68,
+      "lodging": 122
+    },
+    {
+      "state": "VA",
+      "city": "Charlottesville",
+      "mie": 80,
+      "lodging": 136
+    },
+    {
+      "state": "VA",
+      "city": "Loudoun",
+      "mie": 80,
+      "lodging": 115
+    },
+    {
+      "state": "VA",
+      "city": "Lynchburg",
+      "mie": 68,
+      "lodging": 115
+    },
+    {
+      "state": "VA",
+      "city": "Richmond",
+      "mie": 80,
+      "lodging": 157
+    },
+    {
+      "state": "VA",
+      "city": "Roanoke",
+      "mie": 74,
+      "lodging": 119
+    },
+    {
+      "state": "VA",
+      "city": "Virginia Beach",
+      "mie": 74,
+      "lodging": 210
+    },
+    {
+      "state": "VA",
+      "city": "Wallops Island",
+      "mie": 68,
+      "lodging": 248
+    },
+    {
+      "state": "VA",
+      "city": "Williamsburg / York",
+      "mie": 80,
+      "lodging": 134
+    },
+    {
+      "state": "VT",
+      "city": "Burlington",
+      "mie": 86,
+      "lodging": 202
+    },
+    {
+      "state": "VT",
+      "city": "Manchester",
+      "mie": 86,
+      "lodging": 220
+    },
+    {
+      "state": "VT",
+      "city": "Montpelier",
+      "mie": 74,
+      "lodging": 227
+    },
+    {
+      "state": "VT",
+      "city": "Stowe",
+      "mie": 86,
+      "lodging": 185
+    },
+    {
+      "state": "VT",
+      "city": "White River Junction",
+      "mie": 86,
+      "lodging": 144
+    },
+    {
+      "state": "WA",
+      "city": "Everett / Lynnwood",
+      "mie": 86,
+      "lodging": 140
+    },
+    {
+      "state": "WA",
+      "city": "Ocean Shores",
+      "mie": 86,
+      "lodging": 132
+    },
+    {
+      "state": "WA",
+      "city": "Olympia / Tumwater",
+      "mie": 80,
+      "lodging": 175
+    },
+    {
+      "state": "WA",
+      "city": "Port Angeles / Port Townsend",
+      "mie": 92,
+      "lodging": 235
+    },
+    {
+      "state": "WA",
+      "city": "Richland / Pasco",
+      "mie": 86,
+      "lodging": 130
+    },
+    {
+      "state": "WA",
+      "city": "Seattle",
+      "mie": 92,
+      "lodging": 248
+    },
+    {
+      "state": "WA",
+      "city": "Spokane",
+      "mie": 86,
+      "lodging": 126
+    },
+    {
+      "state": "WA",
+      "city": "Tacoma",
+      "mie": 86,
+      "lodging": 136
+    },
+    {
+      "state": "WA",
+      "city": "Vancouver",
+      "mie": 86,
+      "lodging": 155
+    },
+    {
+      "state": "WI",
+      "city": "Madison",
+      "mie": 80,
+      "lodging": 138
+    },
+    {
+      "state": "WI",
+      "city": "Milwaukee",
+      "mie": 80,
+      "lodging": 140
+    },
+    {
+      "state": "WI",
+      "city": "Sturgeon Bay",
+      "mie": 80,
+      "lodging": 133
+    },
+    {
+      "state": "WV",
+      "city": "Charles Town",
+      "mie": 68,
+      "lodging": 122
+    },
+    {
+      "state": "WV",
+      "city": "Charleston",
+      "mie": 68,
+      "lodging": 115
+    },
+    {
+      "state": "WY",
+      "city": "Cody",
+      "mie": 74,
+      "lodging": 190
+    },
+    {
+      "state": "WY",
+      "city": "Jackson / Pinedale",
+      "mie": 92,
+      "lodging": 420
+    }
+  ]
+}
