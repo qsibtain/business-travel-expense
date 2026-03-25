@@ -336,6 +336,7 @@
         <span style="background:#e8f5e9;padding:2px 6px;border-radius:3px;">Green</span> = Extended stay (60% rate)
       </p>
       <p style="margin-top:6px;">Incidentals are always reimbursed in full. Use the "Deduct" checkboxes to remove meals that were provided (conference, group meals) or not available due to travel timing.</p>
+      <p style="margin-top:6px;"><strong>Transition days:</strong> When two segments share the same date (e.g., depart City A and arrive City B on April 25), that date appears <strong>once</strong> using the new city's rate. Incidentals are counted only once. Use the checkboxes to deduct meals not available due to transit. To trigger this, set Segment 1's end date and Segment 2's start date to the same day.</p>
     </div>
   </div>
 
@@ -344,6 +345,12 @@
     Per diem rates from U.S. GSA (gsa.gov) for domestic travel and U.S. Dept. of State for international travel.
     First/last travel day reimbursed at 75%. Extended stays (&gt;30 days) reimbursed at 60%.
     Generated on <span id="printDate"></span>.
+  </div>
+
+  <!-- Version footer -->
+  <div style="text-align:center;padding:16px 0;font-size:0.75rem;color:var(--cmu-gray);border-top:1px solid var(--border);margin-top:10px;">
+    v1.0 | FY2026 Rates (effective Oct 1, 2025) | Domestic: 296 GSA locations | International: 81 cities |
+    <a href="https://github.com/qsibtain/business-travel-expense" target="_blank" style="color:var(--cmu-gray);">GitHub</a>
   </div>
 
 </div>
@@ -747,7 +754,8 @@ function generateGrid() {
     for (let i = 0; i < segDays; i++) {
       const d = new Date(startD);
       d.setDate(d.getDate() + i);
-      const dateStr = d.toISOString().slice(0, 10);
+      // Format as YYYY-MM-DD in local time (not UTC — toISOString shifts dates in western timezones)
+      const dateStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
       // If this is the LAST day of this segment AND it's a transition date,
       // skip it — the next segment will own this day.
