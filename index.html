@@ -336,7 +336,7 @@
         <span style="background:#e8f5e9;padding:2px 6px;border-radius:3px;">Green</span> = Extended stay (60% rate)
       </p>
       <p style="margin-top:6px;">Incidentals are always reimbursed in full. Use the "Deduct" checkboxes to remove meals that were provided (conference, group meals) or not available due to travel timing.</p>
-      <p style="margin-top:6px;"><strong>Transition days:</strong> When two segments share the same date (e.g., depart City A and arrive City B on April 25), that date appears <strong>once</strong> using the new city's rate. Incidentals are counted only once. Use the checkboxes to deduct meals not available due to transit. To trigger this, set Segment 1's end date and Segment 2's start date to the same day.</p>
+      <p style="margin-top:6px;"><strong>Transition days:</strong> When two segments share the same date (e.g., depart City A and arrive City B on April 25), <strong>both rows appear</strong> — one labeled "departing" and one "arriving" — each using its own city's rates. Assign meals to the city where they were consumed. Incidentals are counted <strong>once</strong> (on the departing city row). To trigger this, set Segment 1's end date and Segment 2's start date to the same day.</p>
     </div>
   </div>
 
@@ -754,52 +754,54 @@ function generateGrid() {
     for (let i = 0; i < segDays; i++) {
       const d = new Date(startD);
       d.setDate(d.getDate() + i);
-      // Format as YYYY-MM-DD in local time (not UTC — toISOString shifts dates in western timezones)
       const dateStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
-      // If this is the LAST day of this segment AND it's a transition date,
-      // skip it — the next segment will own this day.
-      if (i === segDays - 1 && transitionDates.has(dateStr) && segIdx < sorted.length - 1) {
-        continue;
-      }
+      // Transition day: last day of this segment that is also first day of next segment
+      const isTransitOutgoing = (i === segDays - 1 && transitionDates.has(dateStr) && segIdx < sorted.length - 1);
+      // Transition day: first day of this segment that was also last day of prev segment
+      const isTransitIncoming = (i === 0 && transitionDates.has(dateStr) && segIdx > 0);
+      const isTransition = isTransitOutgoing || isTransitIncoming;
 
-      globalDayNum++;
+      // Only increment day number when the calendar date changes
+      if (!isTransitIncoming) globalDayNum++;
 
-      // Is this a transition day? (first day of this segment that was also last day of prev segment)
-      const isTransition = (i === 0 && transitionDates.has(dateStr) && segIdx > 0);
-
-      // First/last day of the ENTIRE trip (not per-segment)
+      // First/last day of the ENTIRE trip
       const isFirstDay = (segIdx === 0 && i === 0);
       const isLastDay = (segIdx === sorted.length - 1 && i === segDays - 1);
-      const isFirstOrLast = isFirstDay || isLastDay;
+      const isFirstOrLast = (isFirstDay || isLastDay) && !isTransition;
 
-      // Transition days are NOT first/last — they get full rate,
-      // user deducts specific meals via checkboxes
       let factor = 1;
       if (isExtended) factor = 0.60;
-      if (isFirstOrLast && !isTransition) factor = isExtended ? 0.60 * 0.75 : 0.75;
+      if (isFirstOrLast) factor = isExtended ? 0.60 * 0.75 : 0.75;
+
+      // Incidentals: only on the FIRST row of a shared date (outgoing city keeps them)
+      const incidentalsForRow = isTransitIncoming ? 0 : round(breakdown.incidentals * factor);
 
       days.push({
         date: new Date(d),
+        dateStr,
         dayNum: globalDayNum,
         segmentIdx: segIdx,
         segmentDest: seg.destination,
         segmentType: seg.type,
-        isFirstOrLast: isFirstOrLast && !isTransition,
+        isFirstOrLast,
         isTransition,
+        isTransitOutgoing,
+        isTransitIncoming,
         isExtended,
         baseMIE: seg.mie,
         lodging: seg.lodging,
         factor,
         adjustedMIE: round(seg.mie * factor),
-        adjustedLodging: (isFirstOrLast && !isTransition) ? 0 : seg.lodging,
+        adjustedLodging: isFirstOrLast ? 0 : seg.lodging,
         breakfast: round(breakdown.breakfast * factor),
         lunch: round(breakdown.lunch * factor),
         dinner: round(breakdown.dinner * factor),
-        incidentals: round(breakdown.incidentals * factor),
-        providedBreakfast: false,
-        providedLunch: false,
-        providedDinner: false
+        incidentals: incidentalsForRow,
+        // Auto-deduct: outgoing city defaults dinner off, incoming city defaults B+L off
+        providedBreakfast: isTransitIncoming,
+        providedLunch: isTransitIncoming,
+        providedDinner: isTransitOutgoing
       });
     }
   });
@@ -869,7 +871,8 @@ function renderGrid() {
     const dateStr = `${dayName}, ${day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
 
     let rateNote = '';
-    if (day.isTransition) rateNote = '<br><small style="color:#1565c0">transit</small>';
+    if (day.isTransitOutgoing) rateNote = '<br><small style="color:#1565c0">departing</small>';
+    else if (day.isTransitIncoming) rateNote = '<br><small style="color:#1565c0">arriving</small>';
     else if (day.isFirstOrLast && day.isExtended) rateNote = '<br><small>75%&times;60%</small>';
     else if (day.isFirstOrLast) rateNote = '<br><small>75%</small>';
     else if (day.isExtended) rateNote = '<br><small>60%</small>';
@@ -885,7 +888,7 @@ function renderGrid() {
       <td class="meal-cell" id="bCell_${idx}"><input type="checkbox" ${bChk} onchange="toggleMeal(${idx},'breakfast',this.checked)"><span>$${day.breakfast.toFixed(2)}</span></td>
       <td class="meal-cell" id="lCell_${idx}"><input type="checkbox" ${lChk} onchange="toggleMeal(${idx},'lunch',this.checked)"><span>$${day.lunch.toFixed(2)}</span></td>
       <td class="meal-cell" id="dCell_${idx}"><input type="checkbox" ${dChk} onchange="toggleMeal(${idx},'dinner',this.checked)"><span>$${day.dinner.toFixed(2)}</span></td>
-      <td class="amount">$${day.incidentals.toFixed(2)}</td>`;
+      <td class="amount">${day.isTransitIncoming ? '<span style="color:#999" title="Incidentals counted on departing city row">—</span>' : '$'+day.incidentals.toFixed(2)}</td>`;
     if (showLodging) {
       html += `<td class="amount">$${day.adjustedLodging.toFixed(2)}</td>`;
     }
@@ -919,8 +922,12 @@ function recalculate() {
     if (day.providedLunch) deduction += day.lunch;
     if (day.providedDinner) deduction += day.dinner;
 
-    const mieReimbursable = day.adjustedMIE - deduction;
-    const dayTotal = mieReimbursable + (showLodging ? day.adjustedLodging : 0);
+    // Row reimbursable = meals kept + incidentals (incidentals is 0 on incoming transit rows)
+    const mealsKept = (day.providedBreakfast ? 0 : day.breakfast)
+                    + (day.providedLunch ? 0 : day.lunch)
+                    + (day.providedDinner ? 0 : day.dinner);
+    const rowReimbursable = mealsKept + day.incidentals;
+    const dayTotal = rowReimbursable + (showLodging ? day.adjustedLodging : 0);
 
     updateMealCell(`bCell_${idx}`, day.breakfast, day.providedBreakfast);
     updateMealCell(`lCell_${idx}`, day.lunch, day.providedLunch);
@@ -928,9 +935,9 @@ function recalculate() {
 
     document.getElementById(`reimb_${idx}`).textContent = `$${dayTotal.toFixed(2)}`;
 
-    totalGross += day.adjustedMIE;
+    totalGross += mealsKept + day.incidentals + deduction; // full rate before deductions
     totalDeductions += deduction;
-    totalNet += mieReimbursable;
+    totalNet += rowReimbursable;
     totalLodging += day.adjustedLodging;
   });
 
