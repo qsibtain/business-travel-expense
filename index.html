@@ -210,6 +210,7 @@
     .summary-box { border: 1px solid var(--border); background: var(--cmu-light) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .bulk-select { display: none; }
     .policy-ref { display: block !important; font-size: 9px; color: var(--cmu-gray); margin-top: 10px; border-top: 1px solid var(--border); padding-top: 6px; }
+    #justificationPrintText { display: block !important; }
   }
 
   @media (max-width: 768px) {
@@ -329,6 +330,19 @@
   <div class="card hidden" id="summaryCard">
     <h2>Reimbursement Summary</h2>
     <div class="summary-grid" id="summaryGrid"></div>
+
+    <div style="background: var(--cmu-light); border: 1px solid var(--border); border-radius: 6px; padding: 14px; margin-bottom: 14px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:8px;">
+        <label style="font-size:0.8rem; font-weight:600; color: var(--cmu-gray); text-transform:uppercase; letter-spacing:0.5px;">Reimbursement Justification</label>
+        <div class="no-print" style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:0.75rem; color:var(--cmu-gray);"><span id="justCharCount">0</span> / 240 chars</span>
+          <button id="btnCopyJust" class="btn btn-secondary btn-sm" onclick="copyJustification()">Copy</button>
+        </div>
+      </div>
+      <textarea id="justificationText" readonly class="no-print" style="width:100%; min-height:60px; padding:8px; border:1px solid var(--border); border-radius:4px; font-family:inherit; font-size:0.85rem; background:white; resize:vertical; box-sizing:border-box;"></textarea>
+      <div id="justificationPrintText" style="display:none; font-size:0.85rem; padding:6px 0; line-height:1.5;"></div>
+    </div>
+
     <div style="font-size:0.8rem;color:var(--cmu-gray);">
       <p><strong>Legend:</strong>
         <span style="background:var(--highlight);padding:2px 6px;border-radius:3px;">Yellow</span> = First/last travel day (75% rate) &nbsp;
@@ -349,7 +363,7 @@
 
   <!-- Version footer -->
   <div style="text-align:center;padding:16px 0;font-size:0.75rem;color:var(--cmu-gray);border-top:1px solid var(--border);margin-top:10px;">
-    v1.4 | FY2026 Rates (seasonal) | Domestic: 296 locations | International: 1,034 locations (228 countries) |
+    v1.5 | FY2026 Rates (seasonal) | Domestic: 296 locations | International: 1,034 locations (228 countries) |
     <a href="https://github.com/qsibtain/business-travel-expense" target="_blank" style="color:var(--cmu-gray);">GitHub</a>
   </div>
 
@@ -811,7 +825,7 @@ function generateGrid() {
         lodging: dayLodging,
         factor,
         adjustedMIE: round(dayMIE * factor),
-        adjustedLodging: isFirstOrLast ? 0 : dayLodging,
+        adjustedLodging: dayLodging,
         breakfast: round(breakdown.breakfast * factor),
         lunch: round(breakdown.lunch * factor),
         dinner: round(breakdown.dinner * factor),
@@ -989,6 +1003,7 @@ function recalculate() {
     </div>`;
   }
   grid.innerHTML = html;
+  updateJustification();
 }
 
 function updateMealCell(id, amount, isDeducted) {
@@ -1095,6 +1110,143 @@ function showStatus(id, msg, type) {
   el.textContent = msg;
   el.className = 'status';
   if (msg && type) el.classList.add(type);
+}
+
+// ============================================================
+// Reimbursement Justification (auto-generated text)
+// ============================================================
+function generateJustification() {
+  if (!days || days.length === 0) return '';
+
+  // Group rows by calendar date — transition days have 2 rows for 1 date,
+  // so we union meal-included flags across them.
+  const dateMap = new Map();
+  for (const day of days) {
+    if (!dateMap.has(day.dateStr)) {
+      dateMap.set(day.dateStr, {
+        date: new Date(day.date),
+        dateStr: day.dateStr,
+        bIn: false, lIn: false, dIn: false,
+        factor: day.factor
+      });
+    }
+    const e = dateMap.get(day.dateStr);
+    if (!day.providedBreakfast && day.breakfast > 0) e.bIn = true;
+    if (!day.providedLunch && day.lunch > 0) e.lIn = true;
+    if (!day.providedDinner && day.dinner > 0) e.dIn = true;
+    if (day.factor > e.factor) e.factor = day.factor;
+  }
+
+  const dates = Array.from(dateMap.values()).sort((a, b) => a.dateStr.localeCompare(b.dateStr));
+  if (dates.length === 0) return '';
+
+  const fmtDate = d => {
+    const yy = String(d.date.getFullYear()).slice(-2);
+    const mm = String(d.date.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.date.getDate()).padStart(2, '0');
+    return `${mm}/${dd}/${yy}`;
+  };
+  const fmtPct = d => `${Math.round(d.factor * 100)}%`;
+  const describeMeals = d => {
+    const meals = [];
+    if (d.bIn) meals.push('breakfast');
+    if (d.lIn) meals.push('lunch');
+    if (d.dIn) meals.push('dinner');
+    if (meals.length === 3) return 'meals and incidentals';
+    if (meals.length === 0) return 'only incidentals';
+    if (meals.length === 1) return `only ${meals[0]} and incidentals`;
+    return `only ${meals[0]}, ${meals[1]}, and incidentals`;
+  };
+
+  // Single-day trip
+  if (dates.length === 1) {
+    const d = dates[0];
+    return `Per diem ${describeMeals(d)} at ${fmtPct(d)} for ${fmtDate(d)}`;
+  }
+
+  const first = dates[0];
+  const last = dates[dates.length - 1];
+  const middle = dates.slice(1, -1);
+
+  const clauses = [];
+  const firstMeals = describeMeals(first);
+  clauses.push(`${firstMeals} at ${fmtPct(first)} for first day, ${fmtDate(first)}`);
+
+  const lastMeals = describeMeals(last);
+  if (lastMeals === firstMeals) {
+    clauses.push(`${fmtPct(last)} for last day, ${fmtDate(last)}`);
+  } else {
+    clauses.push(`${lastMeals} at ${fmtPct(last)} for last day, ${fmtDate(last)}`);
+  }
+
+  // Middle: emit one range per distinct factor, plus exceptions for days with deductions
+  if (middle.length > 0) {
+    const factorBuckets = new Map();
+    for (const d of middle) {
+      const pct = fmtPct(d);
+      if (!factorBuckets.has(pct)) factorBuckets.set(pct, []);
+      factorBuckets.get(pct).push(d);
+    }
+
+    for (const [pct, group] of factorBuckets) {
+      const start = group[0];
+      const end = group[group.length - 1];
+      const exceptions = group.filter(d => describeMeals(d) !== 'meals and incidentals');
+
+      if (group.length === 1) {
+        const d = group[0];
+        clauses.push(`${pct} of ${describeMeals(d)} on ${fmtDate(d)}`);
+      } else {
+        let c = `${pct} of meals and incidentals from ${fmtDate(start)} to ${fmtDate(end)}`;
+        if (exceptions.length > 0) {
+          const exClauses = exceptions.map(d => `${describeMeals(d)} on ${fmtDate(d)}`);
+          c += ` except ${exClauses.join(', ')}`;
+        }
+        clauses.push(c);
+      }
+    }
+  }
+
+  return 'Per diem ' + clauses.join(', and ');
+}
+
+function updateJustification() {
+  const text = generateJustification();
+  const ta = document.getElementById('justificationText');
+  const cnt = document.getElementById('justCharCount');
+  const printDiv = document.getElementById('justificationPrintText');
+  if (ta) ta.value = text;
+  if (printDiv) printDiv.textContent = text;
+  if (cnt) {
+    cnt.textContent = text.length;
+    if (text.length > 240) {
+      cnt.style.color = 'var(--cmu-red)';
+      cnt.style.fontWeight = '700';
+    } else {
+      cnt.style.color = '';
+      cnt.style.fontWeight = '';
+    }
+  }
+}
+
+function copyJustification() {
+  const ta = document.getElementById('justificationText');
+  if (!ta || !ta.value) return;
+  ta.select();
+  ta.setSelectionRange(0, 99999);
+  try {
+    document.execCommand('copy');
+    const btn = document.getElementById('btnCopyJust');
+    if (btn) {
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    }
+  } catch (e) {
+    console.error('Copy failed:', e);
+  }
+  // Drop the selection so the textarea doesn't stay highlighted
+  if (window.getSelection) window.getSelection().removeAllRanges();
 }
 </script>
 
